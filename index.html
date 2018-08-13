@@ -6,8 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <title></title>
+    <!-- Link Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+          apiKey: "AIzaSyAMtcVu3rORrlmTWyXPCYEGFd5GPe4Jt9o",
+          authDomain: "rede-social-2310a.firebaseapp.com",
+          databaseURL: "https://rede-social-2310a.firebaseio.com",
+          projectId: "rede-social-2310a",
+          storageBucket: "rede-social-2310a.appspot.com",
+          messagingSenderId: "119146453149"
+        };
+        firebase.initializeApp(config);
+    </script>
   </head>
   <body>
+      <header>
+        <h1> PLAYERS POKER <h1>
+      </header>
+      <form>
+        <label> E-mail </label>
+        <input type="text" class="login-input" placeholder="Digite seu e-mail">
+        <label> Senha </label>
+        <input type="password" class="login-password" placeholder="Mostre sua mão!">
+        <button type="button" class="login-button"> Entrar </button>
+      </form>
+      <form>
+        <label> E-mail </label>
+        <input type="text" class="cads-input" placeholder="Qual o seu e-mail?">
+        <label> Senha </label>
+        <input type="password" class="cads-password" placeholder="Qual a sua mão da sorte?">
+        <button type="button" class="cads-button"> Cadastre-se </button>
+      </form>
+      <p id="cads-p"></p>
+
+
+
 
   </body>
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
