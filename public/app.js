@@ -24,8 +24,9 @@ $(document).ready(function(){
 
     // autenticar cadastro de usuário via firebase
     firebase.auth().createUserWithEmailAndPassword(email, password)
-    .then(function(){
-
+    .then(function(response){
+      var userid = response.user.uid;
+      
     })
     .catch(function(error) {
       // Handle Errors here.
