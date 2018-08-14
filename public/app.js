@@ -38,4 +38,5 @@ $(document).ready(function(){
     $(".cads-password").val('');
     var success = $( "#cads-p" ).text('E-mail cadastrado com sucesso!');
   });
+
 });

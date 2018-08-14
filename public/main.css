@@ -1,0 +1,10 @@
+body {
+  background-image: url('docs/assets/tela-login.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+#img-perfil {
+  width: 15%;
+}
