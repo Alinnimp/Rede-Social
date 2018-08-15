@@ -39,4 +39,12 @@ $(document).ready(function(){
     var success = $( "#cads-p" ).text('E-mail cadastrado com sucesso!');
   });
 
+
+
+  $("#hide").click(function(){
+    $("#tela-login").hide();
+  });
+  $("#show").click(function(){
+    $("tela-perfil").show();
+  });
 });
