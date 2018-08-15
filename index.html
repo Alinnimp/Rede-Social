@@ -13,28 +13,36 @@
   </head>
   <body>
     <section id="tela-login">
-      <img src='docs/assets/tela-login.jpg' id='background-img'> -->
-      <div id="logo">
-        <h1> PLAYERS POKER <h1>
+      <!-- <img src='docs/assets/tela-login.jpg' id='background-img'>  -->
+      <nav id='logo' class="navbar navbar-expand-lg navbar-white bg-white">
+        <div class="container-fluid">
+          <h1>Players Poker</h1>
+        </div>
+      </nav>
+      <div id="box">
+        <div class="box-form">
+          <form>
+            <div class="email">
+              <label> E-mail </label>
+              <input type="text" class="login-input" placeholder="Digite seu e-mail">
+              <label> Senha </label>
+              <input type="password" class="login-password" placeholder="Mostre sua mão!">
+              <button type="button" class="login-button"> Entrar </button>
+            </div>
+          </form>
+          <form id="cadastrar">
+            <label> E-mail </label>
+            <input type="text" class="cads-input" placeholder="Qual o seu e-mail?">
+            <label> Senha </label>
+            <input type="password" class="cads-password" placeholder="Qual a sua mão da sorte?">
+            <button type="button" class="cads-button"> Cadastre-se </button>
+          </form>
+          <p id="cads-p"></p>
+        </div>
       </div>
-      <form id="email">
-        <label> E-mail </label>
-        <input type="text" class="login-input" placeholder="Digite seu e-mail">
-        <label> Senha </label>
-        <input type="password" class="login-password" placeholder="Mostre sua mão!">
-        <button type="button" class="login-button"> Entrar </button>
-      </form>
-      <form id="cadastrar">
-        <label> E-mail </label>
-        <input type="text" class="cads-input" placeholder="Qual o seu e-mail?">
-        <label> Senha </label>
-        <input type="password" class="cads-password" placeholder="Qual a sua mão da sorte?">
-        <button type="button" class="cads-button"> Cadastre-se </button>
-      </form>
-      <p id="cads-p"></p>
     </section>
 
-    <header id="tela-perfil">
+    <!-- <header id="tela-perfil">
       <nav id='logo' class="navbar navbar-expand navbar-white bg-white">
         <div class="container">
           <h1>Players Poker</h1>
@@ -57,11 +65,10 @@
     <img id='img-perfil' src='docs/assets/jogador-poker-007.jpg'>
 
 
-
-<!-- Início da Home-->
+Início da Home
     <section class="form">
       <textarea id= "post" placeholder="Como está a jogatina?" rows="5" cols="28" wrap="hard"></textarea>
-      <!-- <br> </br> -->
+      <br> </br>
       <select name="typePost">
         <option value="public" selected>Público</option>
         <option value="friend">Apenas para seguidores</option>
@@ -69,8 +76,8 @@
       <button id="btn-post"> Publicar </button>
       <span class="counter"> 140 </span>
     </section>
-    <section class="listPosts">
-    </section>
+    <section class="listPosts"></section> -->
+
 
 
 

@@ -1,10 +1,38 @@
 body {
-  background-image: url('docs/assets/tela-login.jpg');
+  background-image: url('docs/assets/poker-resize.jpg');
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 100vh;
 }
-#img-perfil {
-  width: 15%;
+#tela-login {
+  /* display: flex; */
 }
+#logo {
+  font-size: 30px;
+  align-items: center;
+  width: 100%;
+  height: 20vh;
+}
+#box {
+  display: flex;
+  height: 80vh;
+  justify-content: flex-start;
+}
+.box-form {
+  background-color: white;
+  border-style: solid;
+  border-color: black;
+  width: 40%;
+  height: 50vh;
+  padding: 70px;
+  align-items: center;
+}
+.email {
+  font-size: 25px;
+  justify-content: space-between;
+
+}
+/* #img-perfil {
+  width: 15%;
+} */

@@ -26,7 +26,7 @@ $(document).ready(function(){
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function(response){
       var userid = response.user.uid;
-      
+
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -40,12 +40,4 @@ $(document).ready(function(){
     var success = $( "#cads-p" ).text('E-mail cadastrado com sucesso!');
   });
 
-
-
-  $("#hide").click(function(){
-    $("#tela-login").hide();
-  });
-  $("#show").click(function(){
-    $("tela-perfil").show();
-  });
 });
