@@ -8,8 +8,10 @@ $('#btn-post').click(function(event){
   var value = $('#post').val();
   var typePost = $('.typePost').val();
   $('.listPosts').append(`<article>${value}<p>${typePost}</p></article>`);
-
-
+  database.ref('posts/' + userId).push({
+     text: value,
+     select: typePost,
+  })
   $('#post').val('');
 });
 
