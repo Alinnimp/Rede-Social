@@ -9,7 +9,7 @@ $(document).ready(function(){
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
-      console.log(errorCode, errorMessage);
+      console.log(errorCode, errossaasmdrMessage);
       var error = $( "#cads-p" ).text(errorCode + ', '+ errorMessage);
     });
     $('.login-input').val('');
