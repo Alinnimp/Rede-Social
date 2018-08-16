@@ -9,8 +9,7 @@ $(document).ready(function(){
       posts(childData.text, typePost, childKey);
     });
   });
-  $('#btn-post').click(function(event){
-    event.preventDefault();
+  $('#btn-post').click(function(){
     var value = $('#post').val();
     var typePost = $('.typePost').val();
     var dataNew = database.ref('posts').push({
@@ -28,12 +27,12 @@ $(document).ready(function(){
       `);
     $(`button[data-delete-id=${key}]`).click(function(){
       $(this).parent().remove();
-      database.ref('posts/'+ key).remove();
+      database.ref('posts' + "/" + key).remove();
     })
     $(`button[data-edit-id=${key}]`).click(function(){
       var editText= prompt(`Altere o seu texto: ${value}`);
       $(`span[data-text-id=${key}]`).text(editText);
-      database.ref(`posts/${USER_ID}/${key}`).update({
+      database.ref(`posts/${key}`).update({
         text: editText,
         select: typePost
       });
