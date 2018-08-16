@@ -71,19 +71,44 @@ body {
   font-weight: 700;
   color: black;
   font-size: 28px;
+  margin-left: 10vh;
 }
 #img-perfil {
   width: 15%;
+  border-radius: 65px;
+  margin-left: 10vh;
+  margi
 }
 #list-nav {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 700;
   display: flex;
-  justify-content: space-between;
-  color: white;
 }
-.btn-sair {
-  width: 50px;
-  height: 30px;
+#btn-sair {
+  padding: 5px 30px;
+  margin-right: 10vh;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  border: none;
+}
+#img-ficha {
+  width: 30px;
+  height: 40px;
+}
+ .post-text {
+  display: grid;
+  justify-content: center;
+}
+/* #post {
+  width: 50rem;
+  height: 15vh;
+  margin-top: 5vh; */
+}
+.typePost {
+
+}
+#btn-post {
+  /* width: 10px; */
 }
