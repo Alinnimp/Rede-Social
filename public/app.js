@@ -27,7 +27,7 @@ $(document).ready(function(){
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function(response){
       window.location = "main.html";
-      var userid = response.user.uid;
+      // var userid = response.user.uid;
 
     })
     .catch(function(error) {
