@@ -21,7 +21,7 @@ $(document).ready(function(){
   });
   function posts(value, typePost, key){
     $('.listPosts').prepend(`
-      <article>${value}<p>${typePost}</p>
+      <article><p><span data-text-id="${key}">${value}</span></p><p>${typePost}</p>
       <button data-edit-id="${key}">Editar</button>
       <button data-delete-id="${key}">Excluir</button></article>
       `);
@@ -33,8 +33,7 @@ $(document).ready(function(){
       var editText= prompt(`Altere o seu texto: ${value}`);
       $(`span[data-text-id=${key}]`).text(editText);
       database.ref(`posts/${key}`).update({
-        text: editText,
-        select: typePost
+        text: editText
       });
     })
   }
