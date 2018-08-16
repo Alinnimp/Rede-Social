@@ -5,12 +5,16 @@ $(document).ready(function(){
     var email = $(".login-input").val();
     var password = $(".login-password").val();
     // função para usuários entrar
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+    firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(function(response) {
+      var userId = response.user.uid;
+      window.location = "main.html?userId=" + userId;
+    })
+    .catch(function(error) {
       // Handle Errors here.
-      window.location = "main.html";
       var errorCode = error.code;
       var errorMessage = error.message;
-      console.log(errorCode, errossaasmdrMessage);
+      console.log(errorCode, errorMessage);
       var error = $( "#cads-p" ).text(errorCode + ', '+ errorMessage);
     });
     $('.login-input').val('');
@@ -26,9 +30,12 @@ $(document).ready(function(){
     // autenticar cadastro de usuário via firebase
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function(response){
-      window.location = "main.html";
+      var userId = response.user.uid;
+      $('.cads-input').val('');
+      $(".cads-password").val('');
+      var success = $( "#cads-p" ).text('E-mail cadastrado com sucesso!');
+      window.location = "main.html?userId=" + userId;
       // var userid = response.user.uid;
-
     })
     .catch(function(error) {
       // Handle Errors here.
@@ -37,9 +44,7 @@ $(document).ready(function(){
       console.log(errorCode, errorMessage);
       var error = $( "#cads-p" ).text(errorCode + ', '+ errorMessage);
     });
-    $('.cads-input').val('');
-    $(".cads-password").val('');
-    var success = $( "#cads-p" ).text('E-mail cadastrado com sucesso!');
+
   });
 
 });

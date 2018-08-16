@@ -1,4 +1,6 @@
 var database = firebase.database();
+var USER_ID = window.location.search.match(/\?userId=(.*)/)[1];
+
 $(document).ready(function(){
   database.ref('posts').once('value').then(function(snapshot) {
     snapshot.forEach(function(childSnapshot){
@@ -8,8 +10,7 @@ $(document).ready(function(){
       posts(childData.text, typePost, childKey);
     });
   });
-  $('#btn-post').click(function(event){
-    event.preventDefault();
+  $('#btn-post').click(function(){
     var value = $('#post').val();
     var typePost = $('.typePost').val();
     var dataNew = database.ref('posts').push({
@@ -27,13 +28,12 @@ $(document).ready(function(){
       `);
     $(`button[data-delete-id=${key}]`).click(function(){
       $(this).parent().remove();
-      database.ref('posts/'+ key).remove();
+      database.ref('posts' + "/" + key).remove();
     })
     $(`button[data-edit-id=${key}]`).click(function(){
       var editText= prompt(`Altere o seu texto: ${value}`);
-      var palomita = $(`span[data-text-id=${key}]`).html(editText);
-      console.log(palomita);
-      database.ref('posts/' + key).set({
+      $(`span[data-text-id=${key}]`).text(editText);
+      database.ref(`posts/${key}`).update({
         text: editText,
         select: typePost
       });
