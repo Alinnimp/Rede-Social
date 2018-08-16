@@ -1,7 +1,5 @@
 body {
   margin: 0;
-}
-#tela-login {
   background-image: url('../poker-resize.jpg');
   background-position: center;
   background-size: cover;
@@ -104,14 +102,31 @@ body {
  .post-text {
   justify-content: center;
 }
-/#post {
+#post {
   width: 30rem;
   height: 15vh;
   margin-top: 5vh;
+  margin-bottom: 2vh;
+  font-family: 'Robato', sans-serif;
+  font-size: 20px;
 }
 .typePost {
-
+  margin-bottom: 2vh;
+  font-family: 'Robato', sans-serif;
+  margin-bottom: 2vh;
+  padding: 5px 15px 5px 15px;
 }
 #btn-post {
-  /* width: 10px; */
+  background-color: transparent;
+  border-radius: 5px;
+  font-family: 'Robato', sans-serif;
+  padding: 5px 15px 5px 15px;
+  font-size: 20px;
+  color: white;
+  border-color: gainsboro;
+}
+.cads-p {
+  font-family: 'Robato', sans-serif;
+  font-size: 20px;
+  font-weight: 400;
 }
