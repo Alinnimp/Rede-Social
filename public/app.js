@@ -6,7 +6,6 @@ $(document).ready(function(){
     var password = $(".login-password").val();
     // função para usuários entrar
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-      window.location = "main.html";
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
@@ -26,7 +25,6 @@ $(document).ready(function(){
     // autenticar cadastro de usuário via firebase
     firebase.auth().createUserWithEmailAndPassword(email, password)
     .then(function(response){
-      window.location = "main.html";
       var userid = response.user.uid;
 
     })

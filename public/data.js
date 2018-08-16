@@ -1,5 +1,4 @@
- var database = firebase.database();
-
+var database = firebase.database();
 $(document).ready(function(){
   database.ref('posts').once('value').then(function(snapshot) {
     snapshot.forEach(function(childSnapshot){
@@ -9,7 +8,6 @@ $(document).ready(function(){
       posts(childData.text, typePost, childKey);
     });
   });
-
   $('#btn-post').click(function(event){
     event.preventDefault();
     var value = $('#post').val();
@@ -21,13 +19,11 @@ $(document).ready(function(){
     posts(value, typePost, dataNew.key);
     $('#post').val('');
   });
-
-
   function posts(value, typePost, key){
     $('.listPosts').prepend(`
-      <article>${value}<p>${typePost}</p></article>
+      <article>${value}<p>${typePost}</p>
       <button data-edit-id="${key}">Editar</button>
-      <button data-delete-id="${key}">Excluir</button>
+      <button data-delete-id="${key}">Excluir</button></article>
       `);
     $(`button[data-delete-id=${key}]`).click(function(){
       $(this).parent().remove();
