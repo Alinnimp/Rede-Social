@@ -1,4 +1,5 @@
 var database = firebase.database();
+var USER_ID = window.location.search.match(/\?userId=(.*)/)[1];
 $(document).ready(function(){
   database.ref('posts').once('value').then(function(snapshot) {
     snapshot.forEach(function(childSnapshot){
@@ -31,9 +32,8 @@ $(document).ready(function(){
     })
     $(`button[data-edit-id=${key}]`).click(function(){
       var editText= prompt(`Altere o seu texto: ${value}`);
-      var palomita = $(`span[data-text-id=${key}]`).html(editText);
-      console.log(palomita);
-      database.ref('posts/' + key).set({
+      $(`span[data-text-id=${key}]`).text(editText);
+      database.ref(`posts/${USER_ID}/${key}`).update({
         text: editText,
         select: typePost
       });
